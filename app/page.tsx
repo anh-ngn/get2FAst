@@ -86,7 +86,7 @@ export default function Main() {
               <div className="grid lg:grid-cols-5">
                 <Sidebar recents={playlists} className="hidden lg:block h-screen" />
                 <div className="col-span-3 lg:col-span-4 lg:border-l">
-                  <div className="h-full px-4 py-4 lg:px-4">
+                  <div className="h-full px-4 py-2 lg:px-4">
                     <Accounts accounts={accountData} />
                   </div>
                 </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { CopyIcon } from "@radix-ui/react-icons";
+import { CopyIcon, GearIcon } from "@radix-ui/react-icons";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Account } from '@/models/account';
@@ -25,8 +25,11 @@ export const Accounts: React.FC<AccountsProps> = ({ accounts }) => {
           </div>
           <div className="flex items-center">
             <span className="mr-4 text-md font-medium leading-none">{account.code}</span>
+            <Button variant="outline" className="mr-2">
+              <CopyIcon className="h-5 w-5 text-muted-foreground" />
+            </Button>
             <Button variant="outline" className="">
-              <CopyIcon className="h-4 w-4 text-muted-foreground" />
+              <GearIcon className="h-5 w-5 text-muted-foreground" />
             </Button>
           </div>
         </div>
