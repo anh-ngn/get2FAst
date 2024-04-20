@@ -7,11 +7,55 @@ import { ModeToggle } from "@/components/mode-toggle"
 import { Sidebar } from "@/components/sidebar"
 import { playlists } from "@/data/playlists"
 import { Accounts } from "@/components/accounts"
+import { Account } from "@/models/account"
 
 export const metadata: Metadata = {
   title: "get2FAst",
   description: "Get your 2FA codes on every device",
 }
+
+const accountData: Account[] = [
+  {
+    name: "Mark",
+    email: "m@example.com",
+    avatarSrc: "/avatars/03.png",
+    initials: "SD",
+    role: "Owner",
+    code: "123456"
+  },
+  {
+    name: "Robert",
+    email: "m@example.com",
+    avatarSrc: "/avatars/03.png",
+    initials: "SD",
+    role: "Owner",
+    code: "123456"
+  },
+  {
+    name: "Andree",
+    email: "m@example.com",
+    avatarSrc: "/avatars/01.png",
+    initials: "SD",
+    role: "Owner",
+    code: "123456"
+  },
+  {
+    name: "Sofia Davis",
+    email: "m@example.com",
+    avatarSrc: "/avatars/01.png",
+    initials: "SD",
+    role: "Owner",
+    code: "123456"
+  },
+  {
+    name: "Jackson Lee",
+    email: "p@example.com",
+    avatarSrc: "/avatars/02.png",
+    initials: "JL",
+    role: "Member",
+    code: "123456"
+  }
+];
 
 export default function Main() {
   return (
@@ -43,7 +87,7 @@ export default function Main() {
                 <Sidebar recents={playlists} className="hidden lg:block h-screen" />
                 <div className="col-span-3 lg:col-span-4 lg:border-l">
                   <div className="h-full px-4 py-4 lg:px-4">
-                    <Accounts />
+                    <Accounts accounts={accountData} />
                   </div>
                 </div>
               </div>

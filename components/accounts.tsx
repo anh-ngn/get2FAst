@@ -1,143 +1,37 @@
-import { ChevronDownIcon } from "@radix-ui/react-icons"
+import React from 'react';
+import { CopyIcon } from "@radix-ui/react-icons";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Account } from '@/models/account';
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "@/components/ui/command"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
-
-export function Accounts() {
-  return (
-    <div className="grid gap-6 mt-4">
-      <div className="flex items-center justify-between space-x-4">
-        <div className="flex items-center space-x-4">
-          <Avatar>
-            <AvatarImage src="/avatars/01.png" />
-            <AvatarFallback>OM</AvatarFallback>
-          </Avatar>
-          <div>
-            <p className="text-sm font-medium leading-none">Sofia Davis</p>
-            <p className="text-sm text-muted-foreground">m@example.com</p>
-          </div>
-        </div>
-        <Popover>
-          <PopoverTrigger asChild>
-            <Button variant="outline" className="ml-auto">
-              Owner{" "}
-              <ChevronDownIcon className="ml-2 h-4 w-4 text-muted-foreground" />
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent className="p-0" align="end">
-            <Command>
-              <CommandInput placeholder="Select new role..." />
-              <CommandList>
-                <CommandEmpty>No roles found.</CommandEmpty>
-                <CommandGroup>
-                  <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                    <p>Viewer</p>
-                    <p className="text-sm text-muted-foreground">
-                      Can view and comment.
-                    </p>
-                  </CommandItem>
-                  <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                    <p>Developer</p>
-                    <p className="text-sm text-muted-foreground">
-                      Can view, comment and edit.
-                    </p>
-                  </CommandItem>
-                  <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                    <p>Billing</p>
-                    <p className="text-sm text-muted-foreground">
-                      Can view, comment and manage billing.
-                    </p>
-                  </CommandItem>
-                  <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                    <p>Owner</p>
-                    <p className="text-sm text-muted-foreground">
-                      Admin-level access to all resources.
-                    </p>
-                  </CommandItem>
-                </CommandGroup>
-              </CommandList>
-            </Command>
-          </PopoverContent>
-        </Popover>
-      </div>
-      <div className="flex items-center justify-between space-x-4">
-        <div className="flex items-center space-x-4">
-          <Avatar>
-            <AvatarImage src="/avatars/02.png" />
-            <AvatarFallback>JL</AvatarFallback>
-          </Avatar>
-          <div>
-            <p className="text-sm font-medium leading-none">Jackson Lee</p>
-            <p className="text-sm text-muted-foreground">p@example.com</p>
-          </div>
-        </div>
-        <Popover>
-          <PopoverTrigger asChild>
-            <Button variant="outline" className="ml-auto">
-              Member{" "}
-              <ChevronDownIcon className="ml-2 h-4 w-4 text-muted-foreground" />
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent className="p-0" align="end">
-            <Command>
-              <CommandInput placeholder="Select new role..." />
-              <CommandList>
-                <CommandEmpty>No roles found.</CommandEmpty>
-                <CommandGroup className="p-1.5">
-                  <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                    <p>Viewer</p>
-                    <p className="text-sm text-muted-foreground">
-                      Can view and comment.
-                    </p>
-                  </CommandItem>
-                  <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                    <p>Developer</p>
-                    <p className="text-sm text-muted-foreground">
-                      Can view, comment and edit.
-                    </p>
-                  </CommandItem>
-                  <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                    <p>Billing</p>
-                    <p className="text-sm text-muted-foreground">
-                      Can view, comment and manage billing.
-                    </p>
-                  </CommandItem>
-                  <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
-                    <p>Owner</p>
-                    <p className="text-sm text-muted-foreground">
-                      Admin-level access to all resources.
-                    </p>
-                  </CommandItem>
-                </CommandGroup>
-              </CommandList>
-            </Command>
-          </PopoverContent>
-        </Popover>
-      </div>
-    </div>
-  )
+interface AccountsProps {
+  accounts: Account[];
 }
+
+export const Accounts: React.FC<AccountsProps> = ({ accounts }) => {
+  return (
+    <div className="grid gap-2">
+      {accounts.map((account, index) => (
+        <div key={index} className="p-3 border-2 border-gray-100 rounded-lg shadow-sm flex items-center justify-between"> {/* This div has the outline effect */}
+          <div className="flex items-center space-x-4">
+            <Avatar>
+              <AvatarImage src={account.avatarSrc} />
+              <AvatarFallback>{account.initials}</AvatarFallback>
+            </Avatar>
+            <div>
+              <p className="text-sm font-medium leading-none">{account.name}</p>
+              <p className="text-sm text-muted-foreground">{account.email}</p>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <span className="mr-4 text-md font-medium leading-none">{account.code}</span>
+            <Button variant="outline" className="">
+              <CopyIcon className="h-4 w-4 text-muted-foreground" />
+            </Button>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
