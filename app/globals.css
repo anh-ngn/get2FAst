@@ -58,4 +58,13 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .button-outline {
+    /* These will override the inline styles */
+    padding: var(--spacing);
+    margin: 0;
+    cursor: pointer;
+    /* Use the TailwindCSS apply directive to set border color from a variable */
+    border-color: theme('borderColor.DEFAULT');
+  }
 }
