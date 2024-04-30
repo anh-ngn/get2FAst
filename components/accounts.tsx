@@ -13,7 +13,7 @@ export const Accounts: React.FC<AccountsProps> = ({ accounts },) => {
   return (
     <div className="flex flex-col gap-2 flex-grow overflow-y-auto px-4 py-2">
       {accounts.map((account, index) => (
-        <div key={index} className="p-3 border-2 border-gray-100 rounded-lg shadow-sm flex items-center justify-between dark:border-gray-800 dark:text-white dark:shadow-md shadow-sm">
+        <div key={index} className="p-3 border-2 border-gray-100 rounded-lg shadow-sm flex items-center justify-between dark:border-zinc-800 dark:text-white dark:shadow-md shadow-sm">
           <div className="flex items-center space-x-4">
             <Avatar>
               <AvatarImage src={account.avatarSrc} />
