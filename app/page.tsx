@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import { MainNav } from "@/components/main-nav"
 import { Search } from "@/components/search"
-import TeamSwitcher from "@/components/team-switcher"
+import Logo from "@/components/logo"
 import { UserNav } from "@/components/user-nav"
 import { ModeToggle } from "@/components/mode-toggle"
 import { Sidebar } from "@/components/sidebar"
@@ -105,7 +105,7 @@ export default function Main() {
         <div className="hidden md:flex flex-col border-b">
           <div className="flex h-16 items-center px-4">
             <div className="flex-grow">
-              <TeamSwitcher />
+              <Logo />
               <MainNav className="mx-4" />
             </div>
             <div className="flex justify-center flex-grow items-center space-x-4">
