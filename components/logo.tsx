@@ -7,10 +7,6 @@ import {
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import {
-  Popover,
-  PopoverTrigger,
-} from "@/components/ui/popover"
 
 
 type ButtonProps = React.ComponentPropsWithoutRef<typeof Button>
