@@ -8,6 +8,15 @@ import { Sidebar } from "@/components/sidebar"
 import { playlists } from "@/data/playlists"
 import { Accounts } from "@/components/accounts"
 import { Account } from "@/models/account"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
 
 export const metadata: Metadata = {
   title: "get2FAst",
@@ -118,13 +127,29 @@ export default function Main() {
           </div>
         </div>
         {/* main ui */}
-        <div className="flex flex-grow overflow-hidden">
+        <div className="flex flex-grow">
           {/* Sidebar */}
-          <Sidebar recents={playlists} className="hidden lg:block border-t" />
+          <Sidebar recents={playlists} className="hidden lg:block" />
+
           {/* Main Content */}
-          <div className="flex flex-col flex-grow col-span-3 lg:col-span-4 lg:border-l">
+          <div className="flex flex-col flex-grow col-span-3 lg:col-span-3 lg:border-l p-2">
             <Accounts accounts={accountData} />
           </div>
+          {/* Advert Column */}
+          <div className="hidden lg:flex flex-col flex-grow col-span-1 border-l p-4">
+            <Card className="p-4 rounded-lg shadow-md">
+              <CardHeader>
+                <CardTitle>Advertisement</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>Check out our latest products!</CardDescription>
+              </CardContent>
+              <CardFooter>
+                <a href="#" className="text-blue-500 hover:underline">Learn More</a>
+              </CardFooter>
+            </Card>
+          </div>
+
         </div>
       </div>
     </>

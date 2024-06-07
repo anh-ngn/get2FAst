@@ -8,10 +8,9 @@ interface AccountsProps {
   accounts: Account[];
 }
 
-
-export const Accounts: React.FC<AccountsProps> = ({ accounts },) => {
+export const Accounts: React.FC<AccountsProps> = ({ accounts }) => {
   return (
-    <div className="flex flex-col gap-2 flex-grow overflow-y-auto px-4 py-2">
+    <div className="flex flex-col gap-2 flex-grow overflow-y-auto px-2 py-2">
       {accounts.map((account, index) => (
         <div key={index} className="p-3 border-2 border-gray-100 rounded-lg shadow-sm flex items-center justify-between dark:border-zinc-800 dark:text-white dark:shadow-md shadow-sm">
           <div className="flex items-center space-x-4">
