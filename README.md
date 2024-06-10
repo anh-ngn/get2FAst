@@ -2,8 +2,8 @@ This is the old UI for fly2FAst, built with Next.js and Shadcn.
 It's deprecated due to my limited knowledge of tailwind-css.
 I'll make a better version later.
 
-![Screenshot 1](/path/to/screenshot1.png)
-![Screenshot 2](/path/to/screenshot2.png)
+![Screenshot 2](public/screenshot2.jpeg)
+![Screenshot 1](public/screenshot1.jpeg)
 
 ## Getting Started
 
