@@ -26,80 +26,72 @@ export const metadata: Metadata = {
 const accountData: Account[] = [
   {
     name: "Mark",
-    email: "m@example.com",
-    avatarSrc: "/avatars/03.png",
+    email: "Facebook",
+    avatarSrc: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://facebook.com&size=64",
     initials: "SD",
     role: "Owner",
     code: "123456"
   },
   {
-    name: "Mark",
-    email: "m@example.com",
-    avatarSrc: "/avatars/03.png",
+    name: "Elon Musk",
+    email: "Twitter",
+    avatarSrc: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://x.com&size=64",
     initials: "SD",
     role: "Owner",
     code: "123456"
   },
   {
-    name: "Mark",
-    email: "m@example.com",
-    avatarSrc: "/avatars/03.png",
+    name: "Bill Gate",
+    email: "Microsoft",
+    avatarSrc: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://microsoft.com&size=64",
     initials: "SD",
     role: "Owner",
     code: "123456"
   },
   {
-    name: "Mark",
-    email: "m@example.com",
-    avatarSrc: "/avatars/03.png",
+    name: "Sam Altman",
+    email: "ChatGPT",
+    avatarSrc: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://chat.openai.com&size=64",
     initials: "SD",
     role: "Owner",
     code: "123456"
   },
   {
-    name: "Mark",
-    email: "m@example.com",
-    avatarSrc: "/avatars/03.png",
-    initials: "SD",
-    role: "Owner",
-    code: "123456"
-  },
-  {
-    name: "Robert",
-    email: "m@example.com",
-    avatarSrc: "/avatars/03.png",
+    name: "Yann LeCun",
+    email: "Facebook",
+    avatarSrc: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://facebook.com&size=64",
     initials: "SD",
     role: "Owner",
     code: "123456"
   },
   {
     name: "Andree",
-    email: "m@example.com",
-    avatarSrc: "/avatars/01.png",
+    email: "Reddit",
+    avatarSrc: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://reddit.com&size=64",
     initials: "SD",
     role: "Owner",
     code: "123456"
   },
   {
     name: "Sofia Davis",
-    email: "m@example.com",
-    avatarSrc: "/avatars/01.png",
+    email: "Google",
+    avatarSrc: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://google.com&size=64",
     initials: "SD",
     role: "Owner",
     code: "123456"
   },
   {
     name: "Bruce Lee",
-    email: "p@example.com",
-    avatarSrc: "/avatars/02.png",
+    email: "Youtube",
+    avatarSrc: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://youtube.com&size=64",
     initials: "JL",
     role: "Member",
     code: "123456"
   },
   {
-    name: "Jackson Lee",
-    email: "p@example.com",
-    avatarSrc: "/avatars/02.png",
+    name: "Michale Jackson",
+    email: "Spotify",
+    avatarSrc: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://spotify.com&size=64",
     initials: "JL",
     role: "Member",
     code: "123456"
@@ -129,7 +121,9 @@ export default function Main() {
         {/* main ui */}
         <div className="flex flex-grow">
           {/* Sidebar */}
-          <Sidebar recents={playlists} className="hidden lg:block" />
+          {/* <div className="hidden lg:flex flex-col flex-grow col-span-1 border-l p-4"> */}
+            <Sidebar recents={playlists} className="hidden lg:block" />
+          {/* </div> */}
 
           {/* Main Content */}
           <div className="flex flex-col flex-grow col-span-3 lg:col-span-3 lg:border-l p-2">
