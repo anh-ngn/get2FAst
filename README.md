@@ -1,6 +1,6 @@
-This is the old UI for 2FAIr, built with Next.js and Shadcn.
-It's deprecated due to my limited knowledge of tailwind-css.
-I'll make a better version later.
+This is the old UI for 2FAir, built with Next.js and Shadcn.
+It's deprecated due to my limited knowledge of css.
+I've made a new UI, [2FAir-UI](https://github.com/anh-ngn/2FAir-UI).
 
 ![Screenshot 2](public/screenshot2.jpeg)
 ![Screenshot 1](public/screenshot1.jpeg)
